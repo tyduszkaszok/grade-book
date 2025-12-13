@@ -1,0 +1,19 @@
+.grades {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.grades-container {
+  margin-top: 5%;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+  max-width: 1200px; 
+  width: 100%;
+}

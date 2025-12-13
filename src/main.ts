@@ -5,9 +5,9 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { appConfig } from './app/app.config';
 import { App } from './app/app';
-import { MockTimetable } from './app/services/mock-timetable';
+import { MockDb } from './app/services/mock-db';
 
-// 🔒 Zachowaj tylko wybrane klucze w localStorage
+
 const allowedKeys = ['auth'];
 Object.keys(localStorage).forEach(key => {
   if (!allowedKeys.includes(key)) {
@@ -16,14 +16,14 @@ Object.keys(localStorage).forEach(key => {
   }
 });
 
-// 🚀 Bootstrap z dodatkowymi providerami (InMemory API + HttpClient)
+
 bootstrapApplication(App, {
   ...appConfig,
   providers: [
     ...(appConfig.providers || []),
     importProvidersFrom(
       HttpClientModule,
-      HttpClientInMemoryWebApiModule.forRoot(MockTimetable, {
+      HttpClientInMemoryWebApiModule.forRoot(MockDb, {
         dataEncapsulation: false,
         passThruUnknownUrl: true
       })

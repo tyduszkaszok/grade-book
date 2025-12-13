@@ -28,6 +28,16 @@ export class Api {
       password: "password",
       class: "4b",
       token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXJuYW1lIjoic3R1ZGVudF8xIiwicm9sZSI6InN0dWRlbnQiLCJmdWxsX25hbWUiOiJVY3plxYQgdWN6bmlvd3NraSIsImVtYWlsIjoidWN6ZW4xQHN6a29sYS5wbCIsInBhc3N3b3JkIjoicGFzc3dvcmQiLCJjbGFzcyI6IjRiIn0.5_lpYhtl7CWPmqUt8lpKso0hqMZdor3Zy0ZFERMX694"
+    },
+    {
+      sub: 3,
+      username: "student_2",
+      role: "student",
+      full_name: "Uczeń uczniowski2",
+      email: "uczen2@szkola.pl",
+      password: "password",
+      class: "4c",
+      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsInVzZXJuYW1lIjoic3R1ZGVudF8yIiwicm9sZSI6InN0dWRlbnQiLCJmdWxsX25hbWUiOiJVY3plxYQgdWN6bmlvd3NraTIiLCJlbWFpbCI6InVjemVuMkBzemtvbGEucGwiLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiY2xhc3MiOiI0YyJ9.07zkkbMa6dQJVyclfyc0p9aTdB5jHO__PC1ymY7o5YM"
     }
   ];
 

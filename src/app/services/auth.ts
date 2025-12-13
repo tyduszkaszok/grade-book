@@ -40,6 +40,10 @@ export class Auth {
     return this.getUser(this.token)['class']
   }
 
+  public getUserId() : string {
+    return this.getUser(this.token)['username']
+  }
+
   private getUser(token: string): UserModel {
     return JSON.parse(atob(token.split('.')[1])) as UserModel;
   }
