@@ -1,0 +1,27 @@
+<div class="container-fluid text-center bg-indigo font-pp">
+    <div class="row align-items-center">
+        <div class="col">
+            <img src="assets/E-dzienniczek.png" alt="Logo" />
+        </div>
+        <div class="col button" (click)="onClickTimetable()" *ngIf="isStudent">
+            <div>Plan zajęć</div>
+        </div>
+        <div class="col button" (click)="onClickGrades()" *ngIf="isStudent">
+            Oceny
+        </div>
+        <div class="col button" (click)="onClickAttendance()"*ngIf="isStudent">
+            Frekwencja
+        </div>
+        <div class="col button" (click)="onClickClasses()" *ngIf="isTeacher">
+            Klasy
+        </div>
+        <div class="col button" (click)="onClickSchoolInfo()">
+            O szkole
+        </div>
+        <div class="col button">
+            Wyloguj się
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

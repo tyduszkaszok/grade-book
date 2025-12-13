@@ -1,0 +1,39 @@
+.classes {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  padding: 1rem;
+}
+
+/* BOX każdej klasy */
+.class-box {
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+
+/* Nagłówki klas */
+.classes-font {
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #6a1b9a;
+}
+
+/* Tabela */
+.table {
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.table thead {
+  background-color: #9b59b6 !important;
+  color: black;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(155, 89, 182, 0.1);
+}

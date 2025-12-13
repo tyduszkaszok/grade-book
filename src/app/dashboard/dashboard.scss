@@ -1,0 +1,22 @@
+.bg-indigo {
+  background-color: #c9b5f6;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.font-pp {
+  font-family: 'Courier New', Courier, monospace !important;
+  font-size: 18px !important;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px; // lub inna wysokość
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+  &:hover {
+    background-color: rgba(222, 103, 238, 0.192);
+  }
+}

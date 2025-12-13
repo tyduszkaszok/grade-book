@@ -1,0 +1,44 @@
+.results-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  padding: 2rem;
+  color: black;
+}
+
+/* Sekcja opisowa */
+.result-header-box {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(4px);
+}
+
+/* Kolumny wyników */
+.result-col {
+  background: #ffffff;
+  color: #333;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  margin: 0.7rem;
+  box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.15);
+}
+
+/* Tabela szkół */
+.school-table-box {
+  background-color: white;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.2);
+}
+
+.school-table-box table thead {
+  background: #9b59b6;
+  color: white;
+}
+
+.school-table-box table tbody tr:hover {
+  background-color: rgba(155, 89, 182, 0.1);
+}
+

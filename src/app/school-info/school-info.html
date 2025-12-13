@@ -1,0 +1,83 @@
+<div class="container-fluid results-container">
+
+  <div class="row text-center result-header-box">
+    <h5>Nasza szkoła osiąga znakomite wyniki na tle innych szkół naszego powiatu!
+    Tylu uczniów uczestniczyło w zajęciach rozwijających zainteresowania:</h5>
+  </div>
+
+  <div class="row text-center justify-content-center">
+
+    <div class="col-12 col-md-4 col-lg-2 result-col">
+      Informatyczne:
+      <br>{{ getValueFromCol(5, '6') }}
+    </div>
+
+    <div class="col-12 col-md-4 col-lg-2 result-col">
+      Techniczne:
+      <br>{{ getValueFromCol(5, '7') }}
+    </div>
+
+    <div class="col-12 col-md-4 col-lg-2 result-col">
+      Przedmiotowe:
+      <br>{{ getValueFromCol(5, '8') }}
+    </div>
+
+    <div class="col-12 col-md-4 col-lg-2 result-col">
+      Artystyczne:
+      <br>{{ getValueFromCol(5, '9') }}
+    </div>
+
+    <div class="col-12 col-md-4 col-lg-2 result-col">
+      Sportowe:
+      <br>{{ getValueFromCol(5, '10') }}
+    </div>
+
+    <div class="col-12 col-md-4 col-lg-2 result-col">
+      Turystyczno-krajoznawcze:
+      <br>{{ getValueFromCol(5, '11') }}
+    </div>
+
+    <div class="col-12 col-md-4 col-lg-2 result-col">
+      Inne:
+      <br>{{ getValueFromCol(5, '12') }}
+    </div>
+
+  </div>
+
+  <div class="row school-table-box">
+
+    <h4 class="text-center mb-4">Inne szkoły powiatu szamotulskiego:</h4>
+
+    <table class="table table-striped table-sm text-center">
+      <thead>
+        <tr>
+          <th scope="col">Gmina</th>
+          <th scope="col">Typ obszaru</th>
+          <th scope="col">Informatyczne</th>
+          <th scope="col">Technicze</th>
+          <th scope="col">Przedmiotowe</th>
+          <th scope="col">Artystyczne</th>
+          <th scope="col">Sportowe</th>
+          <th scope="col">Turystyczno-krajoznawcze</th>
+          <th scope="col">Inne</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let id of tableSchools">
+          <td>{{ getValueFromCol(id, '4') }}</td>
+          <td>{{ getValueFromCol(id, '5') }}</td>
+          <td>{{ getValueFromCol(id, '6') }}</td>
+          <td>{{ getValueFromCol(id, '7') }}</td>
+          <td>{{ getValueFromCol(id, '8') }}</td>
+          <td>{{ getValueFromCol(id, '9') }}</td>
+          <td>{{ getValueFromCol(id, '10') }}</td>
+          <td>{{ getValueFromCol(id, '11') }}</td>
+          <td>{{ getValueFromCol(id, '12') }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</div>
