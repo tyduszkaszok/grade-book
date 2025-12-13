@@ -34,13 +34,18 @@ export class Dashboard {
   onClickSchoolInfo() {
     this.router.navigate(['dashboard/school-info']);
   }
-
+  
   get isStudent(): boolean {
     return this.auth.getRole() === 'student';
   }
 
   get isTeacher(): boolean {
     return this.auth.getRole() === 'teacher';
+  }
+
+  logout(){
+    this.auth.logout()
+    this.router.navigate(['login']);
   }
 
 }

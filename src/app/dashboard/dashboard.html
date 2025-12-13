@@ -15,10 +15,10 @@
         <div class="col button" (click)="onClickClasses()" *ngIf="isTeacher">
             Klasy
         </div>
-        <div class="col button" (click)="onClickSchoolInfo()">
+        <div class="col button" (click)="onClickSchoolInfo()" *ngIf="isStudent || isTeacher">
             O szkole
         </div>
-        <div class="col button">
+        <div class="col button" (click)="logout()">
             Wyloguj się
         </div>
     </div>

@@ -1,8 +1,8 @@
 export interface StudentModel {
-    id: number;
-    class: string;
-    absence: number; 
-    grades: Grades[];
+  id: number;
+  class: string;
+  absence: number;
+  grades: number[]; 
 }
 
 export interface Grades {

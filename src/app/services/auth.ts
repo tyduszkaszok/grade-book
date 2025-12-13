@@ -32,6 +32,11 @@ export class Auth {
 
   }
 
+  logout(){
+    localStorage.removeItem('auth')
+
+  }
+
   public getRole() : string {
     return this.getUser(this.token)['role']
   }

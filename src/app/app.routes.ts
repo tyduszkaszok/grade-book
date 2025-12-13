@@ -9,6 +9,7 @@ import { HasRoleGuard } from './guards/has-role-guard';
 import { Classes } from './classes/classes';
 import { Attendance } from './attendance/attendance';
 import { SchoolInfo } from './school-info/school-info';
+import { StudentGrades } from './student-grades/student-grades';
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: Login },
@@ -23,7 +24,8 @@ export const routes: Routes = [
       { path: 'messages', component: Messages },
       { path: 'classes', component: Classes },
       { path: 'attendance', component: Attendance },
-      { path: 'school-info', component: SchoolInfo}
+      { path: 'school-info', component: SchoolInfo},
+      { path: 'classes/student/:id', component: StudentGrades }
     ]
   },
 

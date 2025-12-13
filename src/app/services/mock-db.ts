@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 
-
 @Injectable({
   providedIn: 'root',
 })
@@ -14,63 +13,63 @@ export class MockDb implements InMemoryDbService {
       { id: 3, class: "4b", day: "Poniedziałek", subject: "Język angielski", hour: "10:00" },
       { id: 4, class: "4b", day: "Poniedziałek", subject: "Wychowanie fizyczne", hour: "11:00" },
       { id: 5, class: "4b", day: "Poniedziałek", subject: "Historia", hour: "12:00" },
-      
+
       // Wtorek - 4b
       { id: 6, class: "4b", day: "Wtorek", subject: "Fizyka", hour: "8:00" },
       { id: 7, class: "4b", day: "Wtorek", subject: "Chemia", hour: "9:00" },
       { id: 8, class: "4b", day: "Wtorek", subject: "Matematyka", hour: "10:00" },
       { id: 9, class: "4b", day: "Wtorek", subject: "Język angielski", hour: "11:00" },
       { id: 10, class: "4b", day: "Wtorek", subject: "Geografia", hour: "12:00" },
-      
+
       // Środa - 4b
       { id: 11, class: "4b", day: "Środa", subject: "Język polski", hour: "8:00" },
       { id: 12, class: "4b", day: "Środa", subject: "Biologia", hour: "9:00" },
       { id: 13, class: "4b", day: "Środa", subject: "Informatyka", hour: "10:00" },
       { id: 14, class: "4b", day: "Środa", subject: "Matematyka", hour: "11:00" },
       { id: 15, class: "4b", day: "Środa", subject: "Wychowanie fizyczne", hour: "12:00" },
-      
+
       // Czwartek - 4b
       { id: 16, class: "4b", day: "Czwartek", subject: "Historia", hour: "8:00" },
       { id: 17, class: "4b", day: "Czwartek", subject: "Język angielski", hour: "9:00" },
       { id: 18, class: "4b", day: "Czwartek", subject: "Fizyka", hour: "10:00" },
       { id: 19, class: "4b", day: "Czwartek", subject: "Język polski", hour: "11:00" },
       { id: 20, class: "4b", day: "Czwartek", subject: "Wiedza o społeczeństwie", hour: "12:00" },
-      
+
       // Piątek - 4b
       { id: 21, class: "4b", day: "Piątek", subject: "Matematyka", hour: "8:00" },
       { id: 22, class: "4b", day: "Piątek", subject: "Chemia", hour: "9:00" },
       { id: 23, class: "4b", day: "Piątek", subject: "Geografia", hour: "10:00" },
       { id: 24, class: "4b", day: "Piątek", subject: "Biologia", hour: "11:00" },
       { id: 25, class: "4b", day: "Piątek", subject: "Godzina wychowawcza", hour: "12:00" },
-      
+
       // Poniedziałek - 4c
       { id: 26, class: "4c", day: "Poniedziałek", subject: "Język angielski", hour: "8:00" },
       { id: 27, class: "4c", day: "Poniedziałek", subject: "Matematyka", hour: "9:00" },
       { id: 28, class: "4c", day: "Poniedziałek", subject: "Fizyka", hour: "10:00" },
       { id: 29, class: "4c", day: "Poniedziałek", subject: "Język polski", hour: "11:00" },
       { id: 30, class: "4c", day: "Poniedziałek", subject: "Wychowanie fizyczne", hour: "12:00" },
-      
+
       // Wtorek - 4c
       { id: 31, class: "4c", day: "Wtorek", subject: "Historia", hour: "8:00" },
       { id: 32, class: "4c", day: "Wtorek", subject: "Matematyka", hour: "9:00" },
       { id: 33, class: "4c", day: "Wtorek", subject: "Język angielski", hour: "10:00" },
       { id: 34, class: "4c", day: "Wtorek", subject: "Biologia", hour: "11:00" },
       { id: 35, class: "4c", day: "Wtorek", subject: "Geografia", hour: "12:00" },
-      
+
       // Środa - 4c
       { id: 36, class: "4c", day: "Środa", subject: "Chemia", hour: "8:00" },
       { id: 37, class: "4c", day: "Środa", subject: "Język polski", hour: "9:00" },
       { id: 38, class: "4c", day: "Środa", subject: "Matematyka", hour: "10:00" },
       { id: 39, class: "4c", day: "Środa", subject: "Informatyka", hour: "11:00" },
       { id: 40, class: "4c", day: "Środa", subject: "Wychowanie fizyczne", hour: "12:00" },
-      
+
       // Czwartek - 4c
       { id: 41, class: "4c", day: "Czwartek", subject: "Fizyka", hour: "8:00" },
       { id: 42, class: "4c", day: "Czwartek", subject: "Język angielski", hour: "9:00" },
       { id: 43, class: "4c", day: "Czwartek", subject: "Geografia", hour: "10:00" },
       { id: 44, class: "4c", day: "Czwartek", subject: "Historia", hour: "11:00" },
       { id: 45, class: "4c", day: "Czwartek", subject: "Wiedza o społeczeństwie", hour: "12:00" },
-      
+
       // Piątek - 4c
       { id: 46, class: "4c", day: "Piątek", subject: "Język polski", hour: "8:00" },
       { id: 47, class: "4c", day: "Piątek", subject: "Matematyka", hour: "9:00" },
@@ -78,60 +77,330 @@ export class MockDb implements InMemoryDbService {
       { id: 49, class: "4c", day: "Piątek", subject: "Biologia", hour: "11:00" },
       { id: 50, class: "4c", day: "Piątek", subject: "Godzina wychowawcza", hour: "12:00" }
     ];
-    
+
     const students = [
-      // student_1 - Oceny
+      // student_1 - Matematyka (15 ocen)
       { id: 1, username: "student_1", subject: "Matematyka", grade: 5 },
       { id: 2, username: "student_1", subject: "Matematyka", grade: 4 },
       { id: 3, username: "student_1", subject: "Matematyka", grade: 6 },
-      { id: 4, username: "student_1", subject: "Język polski", grade: 4 },
-      { id: 5, username: "student_1", subject: "Język polski", grade: 5 },
-      { id: 6, username: "student_1", subject: "Język angielski", grade: 5 },
-      { id: 7, username: "student_1", subject: "Język angielski", grade: 5 },
-      { id: 8, username: "student_1", subject: "Język angielski", grade: 6 },
-      { id: 9, username: "student_1", subject: "Fizyka", grade: 6 },
-      { id: 10, username: "student_1", subject: "Fizyka", grade: 5 },
-      { id: 11, username: "student_1", subject: "Fizyka", grade: 5 },
-      { id: 12, username: "student_1", subject: "Chemia", grade: 4 },
-      { id: 13, username: "student_1", subject: "Chemia", grade: 5 },
-      { id: 14, username: "student_1", subject: "Biologia", grade: 5 },
-      { id: 15, username: "student_1", subject: "Biologia", grade: 4 },
-      { id: 16, username: "student_1", subject: "Historia", grade: 5 },
-      { id: 17, username: "student_1", subject: "Historia", grade: 5 },
-      { id: 18, username: "student_1", subject: "Geografia", grade: 4 },
-      { id: 19, username: "student_1", subject: "Geografia", grade: 5 },
-      { id: 20, username: "student_1", subject: "Informatyka", grade: 6 },
-      { id: 21, username: "student_1", subject: "Informatyka", grade: 6 },
-      { id: 22, username: "student_1", subject: "Wychowanie fizyczne", grade: 5 },
-      { id: 23, username: "student_1", subject: "Wychowanie fizyczne", grade: 6 },
-      { id: 24, username: "student_1", subject: "Wiedza o społeczeństwie", grade: 5 },
-      
-      // student_2 - Oceny
-      { id: 25, username: "student_2", subject: "Matematyka", grade: 3 },
-      { id: 26, username: "student_2", subject: "Matematyka", grade: 4 },
-      { id: 27, username: "student_2", subject: "Matematyka", grade: 4 },
-      { id: 28, username: "student_2", subject: "Język polski", grade: 5 },
-      { id: 29, username: "student_2", subject: "Język polski", grade: 4 },
-      { id: 30, username: "student_2", subject: "Język angielski", grade: 4 },
-      { id: 31, username: "student_2", subject: "Język angielski", grade: 5 },
-      { id: 32, username: "student_2", subject: "Język angielski", grade: 4 },
-      { id: 33, username: "student_2", subject: "Fizyka", grade: 4 },
-      { id: 34, username: "student_2", subject: "Fizyka", grade: 3 },
-      { id: 35, username: "student_2", subject: "Fizyka", grade: 4 },
-      { id: 36, username: "student_2", subject: "Chemia", grade: 5 },
-      { id: 37, username: "student_2", subject: "Chemia", grade: 5 },
-      { id: 38, username: "student_2", subject: "Biologia", grade: 4 },
-      { id: 39, username: "student_2", subject: "Biologia", grade: 5 },
-      { id: 40, username: "student_2", subject: "Historia", grade: 4 },
-      { id: 41, username: "student_2", subject: "Historia", grade: 4 },
-      { id: 42, username: "student_2", subject: "Geografia", grade: 5 },
-      { id: 43, username: "student_2", subject: "Geografia", grade: 4 },
-      { id: 44, username: "student_2", subject: "Informatyka", grade: 5 },
-      { id: 45, username: "student_2", subject: "Informatyka", grade: 5 },
-      { id: 46, username: "student_2", subject: "Wychowanie fizyczne", grade: 6 },
-      { id: 47, username: "student_2", subject: "Wychowanie fizyczne", grade: 5 },
-      { id: 48, username: "student_2", subject: "Wiedza o społeczeństwie", grade: 4 }
+      { id: 4, username: "student_1", subject: "Matematyka", grade: 5 },
+      { id: 5, username: "student_1", subject: "Matematyka", grade: 5 },
+      { id: 6, username: "student_1", subject: "Matematyka", grade: 6 },
+      { id: 7, username: "student_1", subject: "Matematyka", grade: 4 },
+      { id: 8, username: "student_1", subject: "Matematyka", grade: 5 },
+      { id: 9, username: "student_1", subject: "Matematyka", grade: 5 },
+      { id: 10, username: "student_1", subject: "Matematyka", grade: 6 },
+      { id: 11, username: "student_1", subject: "Matematyka", grade: 5 },
+      { id: 12, username: "student_1", subject: "Matematyka", grade: 4 },
+      { id: 13, username: "student_1", subject: "Matematyka", grade: 5 },
+      { id: 14, username: "student_1", subject: "Matematyka", grade: 6 },
+      { id: 15, username: "student_1", subject: "Matematyka", grade: 5 },
+
+      // student_1 - Język polski (12 ocen)
+      { id: 16, username: "student_1", subject: "Język polski", grade: 4 },
+      { id: 17, username: "student_1", subject: "Język polski", grade: 5 },
+      { id: 18, username: "student_1", subject: "Język polski", grade: 4 },
+      { id: 19, username: "student_1", subject: "Język polski", grade: 5 },
+      { id: 20, username: "student_1", subject: "Język polski", grade: 5 },
+      { id: 21, username: "student_1", subject: "Język polski", grade: 4 },
+      { id: 22, username: "student_1", subject: "Język polski", grade: 5 },
+      { id: 23, username: "student_1", subject: "Język polski", grade: 4 },
+      { id: 24, username: "student_1", subject: "Język polski", grade: 5 },
+      { id: 25, username: "student_1", subject: "Język polski", grade: 5 },
+      { id: 26, username: "student_1", subject: "Język polski", grade: 4 },
+      { id: 27, username: "student_1", subject: "Język polski", grade: 5 },
+
+      // student_1 - Język angielski (15 ocen)
+      { id: 28, username: "student_1", subject: "Język angielski", grade: 5 },
+      { id: 29, username: "student_1", subject: "Język angielski", grade: 5 },
+      { id: 30, username: "student_1", subject: "Język angielski", grade: 6 },
+      { id: 31, username: "student_1", subject: "Język angielski", grade: 5 },
+      { id: 32, username: "student_1", subject: "Język angielski", grade: 6 },
+      { id: 33, username: "student_1", subject: "Język angielski", grade: 5 },
+      { id: 34, username: "student_1", subject: "Język angielski", grade: 5 },
+      { id: 35, username: "student_1", subject: "Język angielski", grade: 6 },
+      { id: 36, username: "student_1", subject: "Język angielski", grade: 5 },
+      { id: 37, username: "student_1", subject: "Język angielski", grade: 6 },
+      { id: 38, username: "student_1", subject: "Język angielski", grade: 5 },
+      { id: 39, username: "student_1", subject: "Język angielski", grade: 5 },
+      { id: 40, username: "student_1", subject: "Język angielski", grade: 6 },
+      { id: 41, username: "student_1", subject: "Język angielski", grade: 5 },
+      { id: 42, username: "student_1", subject: "Język angielski", grade: 6 },
+
+      // student_1 - Fizyka (15 ocen)
+      { id: 43, username: "student_1", subject: "Fizyka", grade: 6 },
+      { id: 44, username: "student_1", subject: "Fizyka", grade: 5 },
+      { id: 45, username: "student_1", subject: "Fizyka", grade: 5 },
+      { id: 46, username: "student_1", subject: "Fizyka", grade: 6 },
+      { id: 47, username: "student_1", subject: "Fizyka", grade: 5 },
+      { id: 48, username: "student_1", subject: "Fizyka", grade: 6 },
+      { id: 49, username: "student_1", subject: "Fizyka", grade: 5 },
+      { id: 50, username: "student_1", subject: "Fizyka", grade: 5 },
+      { id: 51, username: "student_1", subject: "Fizyka", grade: 6 },
+      { id: 52, username: "student_1", subject: "Fizyka", grade: 5 },
+      { id: 53, username: "student_1", subject: "Fizyka", grade: 6 },
+      { id: 54, username: "student_1", subject: "Fizyka", grade: 5 },
+      { id: 55, username: "student_1", subject: "Fizyka", grade: 5 },
+      { id: 56, username: "student_1", subject: "Fizyka", grade: 6 },
+      { id: 57, username: "student_1", subject: "Fizyka", grade: 5 },
+
+      // student_1 - Chemia (12 ocen)
+      { id: 58, username: "student_1", subject: "Chemia", grade: 4 },
+      { id: 59, username: "student_1", subject: "Chemia", grade: 5 },
+      { id: 60, username: "student_1", subject: "Chemia", grade: 4 },
+      { id: 61, username: "student_1", subject: "Chemia", grade: 5 },
+      { id: 62, username: "student_1", subject: "Chemia", grade: 5 },
+      { id: 63, username: "student_1", subject: "Chemia", grade: 4 },
+      { id: 64, username: "student_1", subject: "Chemia", grade: 5 },
+      { id: 65, username: "student_1", subject: "Chemia", grade: 4 },
+      { id: 66, username: "student_1", subject: "Chemia", grade: 5 },
+      { id: 67, username: "student_1", subject: "Chemia", grade: 5 },
+      { id: 68, username: "student_1", subject: "Chemia", grade: 4 },
+      { id: 69, username: "student_1", subject: "Chemia", grade: 5 },
+
+      // student_1 - Biologia (12 ocen)
+      { id: 70, username: "student_1", subject: "Biologia", grade: 5 },
+      { id: 71, username: "student_1", subject: "Biologia", grade: 4 },
+      { id: 72, username: "student_1", subject: "Biologia", grade: 5 },
+      { id: 73, username: "student_1", subject: "Biologia", grade: 5 },
+      { id: 74, username: "student_1", subject: "Biologia", grade: 4 },
+      { id: 75, username: "student_1", subject: "Biologia", grade: 5 },
+      { id: 76, username: "student_1", subject: "Biologia", grade: 5 },
+      { id: 77, username: "student_1", subject: "Biologia", grade: 4 },
+      { id: 78, username: "student_1", subject: "Biologia", grade: 5 },
+      { id: 79, username: "student_1", subject: "Biologia", grade: 5 },
+      { id: 80, username: "student_1", subject: "Biologia", grade: 4 },
+      { id: 81, username: "student_1", subject: "Biologia", grade: 5 },
+
+      // student_1 - Historia (12 ocen)
+      { id: 82, username: "student_1", subject: "Historia", grade: 5 },
+      { id: 83, username: "student_1", subject: "Historia", grade: 5 },
+      { id: 84, username: "student_1", subject: "Historia", grade: 4 },
+      { id: 85, username: "student_1", subject: "Historia", grade: 5 },
+      { id: 86, username: "student_1", subject: "Historia", grade: 5 },
+      { id: 87, username: "student_1", subject: "Historia", grade: 5 },
+      { id: 88, username: "student_1", subject: "Historia", grade: 4 },
+      { id: 89, username: "student_1", subject: "Historia", grade: 5 },
+      { id: 90, username: "student_1", subject: "Historia", grade: 5 },
+      { id: 91, username: "student_1", subject: "Historia", grade: 5 },
+      { id: 92, username: "student_1", subject: "Historia", grade: 4 },
+      { id: 93, username: "student_1", subject: "Historia", grade: 5 },
+
+      // student_1 - Geografia (12 ocen)
+      { id: 94, username: "student_1", subject: "Geografia", grade: 4 },
+      { id: 95, username: "student_1", subject: "Geografia", grade: 5 },
+      { id: 96, username: "student_1", subject: "Geografia", grade: 4 },
+      { id: 97, username: "student_1", subject: "Geografia", grade: 5 },
+      { id: 98, username: "student_1", subject: "Geografia", grade: 4 },
+      { id: 99, username: "student_1", subject: "Geografia", grade: 5 },
+      { id: 100, username: "student_1", subject: "Geografia", grade: 4 },
+      { id: 101, username: "student_1", subject: "Geografia", grade: 5 },
+      { id: 102, username: "student_1", subject: "Geografia", grade: 4 },
+      { id: 103, username: "student_1", subject: "Geografia", grade: 5 },
+      { id: 104, username: "student_1", subject: "Geografia", grade: 4 },
+      { id: 105, username: "student_1", subject: "Geografia", grade: 5 },
+
+      // student_1 - Informatyka (12 ocen)
+      { id: 106, username: "student_1", subject: "Informatyka", grade: 6 },
+      { id: 107, username: "student_1", subject: "Informatyka", grade: 6 },
+      { id: 108, username: "student_1", subject: "Informatyka", grade: 5 },
+      { id: 109, username: "student_1", subject: "Informatyka", grade: 6 },
+      { id: 110, username: "student_1", subject: "Informatyka", grade: 6 },
+      { id: 111, username: "student_1", subject: "Informatyka", grade: 6 },
+      { id: 112, username: "student_1", subject: "Informatyka", grade: 5 },
+      { id: 113, username: "student_1", subject: "Informatyka", grade: 6 },
+      { id: 114, username: "student_1", subject: "Informatyka", grade: 6 },
+      { id: 115, username: "student_1", subject: "Informatyka", grade: 6 },
+      { id: 116, username: "student_1", subject: "Informatyka", grade: 5 },
+      { id: 117, username: "student_1", subject: "Informatyka", grade: 6 },
+
+      // student_1 - Wychowanie fizyczne (12 ocen)
+      { id: 118, username: "student_1", subject: "Wychowanie fizyczne", grade: 5 },
+      { id: 119, username: "student_1", subject: "Wychowanie fizyczne", grade: 6 },
+      { id: 120, username: "student_1", subject: "Wychowanie fizyczne", grade: 5 },
+      { id: 121, username: "student_1", subject: "Wychowanie fizyczne", grade: 6 },
+      { id: 122, username: "student_1", subject: "Wychowanie fizyczne", grade: 5 },
+      { id: 123, username: "student_1", subject: "Wychowanie fizyczne", grade: 6 },
+      { id: 124, username: "student_1", subject: "Wychowanie fizyczne", grade: 5 },
+      { id: 125, username: "student_1", subject: "Wychowanie fizyczne", grade: 6 },
+      { id: 126, username: "student_1", subject: "Wychowanie fizyczne", grade: 5 },
+      { id: 127, username: "student_1", subject: "Wychowanie fizyczne", grade: 6 },
+      { id: 128, username: "student_1", subject: "Wychowanie fizyczne", grade: 5 },
+      { id: 129, username: "student_1", subject: "Wychowanie fizyczne", grade: 6 },
+
+      // student_1 - Wiedza o społeczeństwie (10 ocen)
+      { id: 130, username: "student_1", subject: "Wiedza o społeczeństwie", grade: 5 },
+      { id: 131, username: "student_1", subject: "Wiedza o społeczeństwie", grade: 4 },
+      { id: 132, username: "student_1", subject: "Wiedza o społeczeństwie", grade: 5 },
+      { id: 133, username: "student_1", subject: "Wiedza o społeczeństwie", grade: 5 },
+      { id: 134, username: "student_1", subject: "Wiedza o społeczeństwie", grade: 4 },
+      { id: 135, username: "student_1", subject: "Wiedza o społeczeństwie", grade: 5 },
+      { id: 136, username: "student_1", subject: "Wiedza o społeczeństwie", grade: 5 },
+      { id: 137, username: "student_1", subject: "Wiedza o społeczeństwie", grade: 4 },
+      { id: 138, username: "student_1", subject: "Wiedza o społeczeństwie", grade: 5 },
+      { id: 139, username: "student_1", subject: "Wiedza o społeczeństwie", grade: 5 },
+
+      // student_2 - Matematyka (15 ocen)
+      { id: 140, username: "student_2", subject: "Matematyka", grade: 3 },
+      { id: 141, username: "student_2", subject: "Matematyka", grade: 4 },
+      { id: 142, username: "student_2", subject: "Matematyka", grade: 4 },
+      { id: 143, username: "student_2", subject: "Matematyka", grade: 3 },
+      { id: 144, username: "student_2", subject: "Matematyka", grade: 4 },
+      { id: 145, username: "student_2", subject: "Matematyka", grade: 3 },
+      { id: 146, username: "student_2", subject: "Matematyka", grade: 4 },
+      { id: 147, username: "student_2", subject: "Matematyka", grade: 4 },
+      { id: 148, username: "student_2", subject: "Matematyka", grade: 3 },
+      { id: 149, username: "student_2", subject: "Matematyka", grade: 4 },
+      { id: 150, username: "student_2", subject: "Matematyka", grade: 4 },
+      { id: 151, username: "student_2", subject: "Matematyka", grade: 3 },
+      { id: 152, username: "student_2", subject: "Matematyka", grade: 4 },
+      { id: 153, username: "student_2", subject: "Matematyka", grade: 5 },
+      { id: 154, username: "student_2", subject: "Matematyka", grade: 4 },
+
+      // student_2 - Język polski (12 ocen)
+      { id: 155, username: "student_2", subject: "Język polski", grade: 5 },
+      { id: 156, username: "student_2", subject: "Język polski", grade: 4 },
+      { id: 157, username: "student_2", subject: "Język polski", grade: 4 },
+      { id: 158, username: "student_2", subject: "Język polski", grade: 5 },
+      { id: 159, username: "student_2", subject: "Język polski", grade: 4 },
+      { id: 160, username: "student_2", subject: "Język polski", grade: 5 },
+      { id: 161, username: "student_2", subject: "Język polski", grade: 4 },
+      { id: 162, username: "student_2", subject: "Język polski", grade: 4 },
+      { id: 163, username: "student_2", subject: "Język polski", grade: 5 },
+      { id: 164, username: "student_2", subject: "Język polski", grade: 4 },
+      { id: 165, username: "student_2", subject: "Język polski", grade: 5 },
+      { id: 166, username: "student_2", subject: "Język polski", grade: 4 },
+
+      // student_2 - Język angielski (15 ocen)
+      { id: 167, username: "student_2", subject: "Język angielski", grade: 4 },
+      { id: 168, username: "student_2", subject: "Język angielski", grade: 5 },
+      { id: 169, username: "student_2", subject: "Język angielski", grade: 4 },
+      { id: 170, username: "student_2", subject: "Język angielski", grade: 4 },
+      { id: 171, username: "student_2", subject: "Język angielski", grade: 5 },
+      { id: 172, username: "student_2", subject: "Język angielski", grade: 4 },
+      { id: 173, username: "student_2", subject: "Język angielski", grade: 5 },
+      { id: 174, username: "student_2", subject: "Język angielski", grade: 4 },
+      { id: 175, username: "student_2", subject: "Język angielski", grade: 4 },
+      { id: 176, username: "student_2", subject: "Język angielski", grade: 5 },
+      { id: 177, username: "student_2", subject: "Język angielski", grade: 4 },
+      { id: 178, username: "student_2", subject: "Język angielski", grade: 5 },
+      { id: 179, username: "student_2", subject: "Język angielski", grade: 4 },
+      { id: 180, username: "student_2", subject: "Język angielski", grade: 4 },
+      { id: 181, username: "student_2", subject: "Język angielski", grade: 5 },
+
+      // student_2 - Fizyka (15 ocen)
+      { id: 182, username: "student_2", subject: "Fizyka", grade: 4 },
+      { id: 183, username: "student_2", subject: "Fizyka", grade: 3 },
+      { id: 184, username: "student_2", subject: "Fizyka", grade: 4 },
+      { id: 185, username: "student_2", subject: "Fizyka", grade: 3 },
+      { id: 186, username: "student_2", subject: "Fizyka", grade: 4 },
+      { id: 187, username: "student_2", subject: "Fizyka", grade: 4 },
+      { id: 188, username: "student_2", subject: "Fizyka", grade: 3 },
+      { id: 189, username: "student_2", subject: "Fizyka", grade: 4 },
+      { id: 190, username: "student_2", subject: "Fizyka", grade: 4 },
+      { id: 191, username: "student_2", subject: "Fizyka", grade: 3 },
+      { id: 192, username: "student_2", subject: "Fizyka", grade: 4 },
+      { id: 193, username: "student_2", subject: "Fizyka", grade: 4 },
+      { id: 194, username: "student_2", subject: "Fizyka", grade: 3 },
+      { id: 195, username: "student_2", subject: "Fizyka", grade: 4 },
+      { id: 196, username: "student_2", subject: "Fizyka", grade: 5 },
+
+      // student_2 - Chemia (12 ocen)
+      { id: 197, username: "student_2", subject: "Chemia", grade: 5 },
+      { id: 198, username: "student_2", subject: "Chemia", grade: 5 },
+      { id: 199, username: "student_2", subject: "Chemia", grade: 4 },
+      { id: 200, username: "student_2", subject: "Chemia", grade: 5 },
+      { id: 201, username: "student_2", subject: "Chemia", grade: 5 },
+      { id: 202, username: "student_2", subject: "Chemia", grade: 5 },
+      { id: 203, username: "student_2", subject: "Chemia", grade: 4 },
+      { id: 204, username: "student_2", subject: "Chemia", grade: 5 },
+      { id: 205, username: "student_2", subject: "Chemia", grade: 5 },
+      { id: 206, username: "student_2", subject: "Chemia", grade: 5 },
+      { id: 207, username: "student_2", subject: "Chemia", grade: 4 },
+      { id: 208, username: "student_2", subject: "Chemia", grade: 5 },
+      // student_2 - Biologia (12 ocen)
+      { id: 209, username: "student_2", subject: "Biologia", grade: 4 },
+      { id: 210, username: "student_2", subject: "Biologia", grade: 5 },
+      { id: 211, username: "student_2", subject: "Biologia", grade: 4 },
+      { id: 212, username: "student_2", subject: "Biologia", grade: 5 },
+      { id: 213, username: "student_2", subject: "Biologia", grade: 4 },
+      { id: 214, username: "student_2", subject: "Biologia", grade: 5 },
+      { id: 215, username: "student_2", subject: "Biologia", grade: 4 },
+      { id: 216, username: "student_2", subject: "Biologia", grade: 5 },
+      { id: 217, username: "student_2", subject: "Biologia", grade: 4 },
+      { id: 218, username: "student_2", subject: "Biologia", grade: 5 },
+      { id: 219, username: "student_2", subject: "Biologia", grade: 4 },
+      { id: 220, username: "student_2", subject: "Biologia", grade: 5 },
+
+      // student_2 - Historia (12 ocen)
+      { id: 221, username: "student_2", subject: "Historia", grade: 4 },
+      { id: 222, username: "student_2", subject: "Historia", grade: 4 },
+      { id: 223, username: "student_2", subject: "Historia", grade: 3 },
+      { id: 224, username: "student_2", subject: "Historia", grade: 4 },
+      { id: 225, username: "student_2", subject: "Historia", grade: 4 },
+      { id: 226, username: "student_2", subject: "Historia", grade: 4 },
+      { id: 227, username: "student_2", subject: "Historia", grade: 3 },
+      { id: 228, username: "student_2", subject: "Historia", grade: 4 },
+      { id: 229, username: "student_2", subject: "Historia", grade: 4 },
+      { id: 230, username: "student_2", subject: "Historia", grade: 4 },
+      { id: 231, username: "student_2", subject: "Historia", grade: 3 },
+      { id: 232, username: "student_2", subject: "Historia", grade: 4 },
+
+      // student_2 - Geografia (12 ocen)
+      { id: 233, username: "student_2", subject: "Geografia", grade: 5 },
+      { id: 234, username: "student_2", subject: "Geografia", grade: 4 },
+      { id: 235, username: "student_2", subject: "Geografia", grade: 5 },
+      { id: 236, username: "student_2", subject: "Geografia", grade: 4 },
+      { id: 237, username: "student_2", subject: "Geografia", grade: 5 },
+      { id: 238, username: "student_2", subject: "Geografia", grade: 4 },
+      { id: 239, username: "student_2", subject: "Geografia", grade: 5 },
+      { id: 240, username: "student_2", subject: "Geografia", grade: 4 },
+      { id: 241, username: "student_2", subject: "Geografia", grade: 5 },
+      { id: 242, username: "student_2", subject: "Geografia", grade: 4 },
+      { id: 243, username: "student_2", subject: "Geografia", grade: 5 },
+      { id: 244, username: "student_2", subject: "Geografia", grade: 4 },
+
+      // student_2 - Informatyka (12 ocen)
+      { id: 245, username: "student_2", subject: "Informatyka", grade: 5 },
+      { id: 246, username: "student_2", subject: "Informatyka", grade: 5 },
+      { id: 247, username: "student_2", subject: "Informatyka", grade: 4 },
+      { id: 248, username: "student_2", subject: "Informatyka", grade: 5 },
+      { id: 249, username: "student_2", subject: "Informatyka", grade: 5 },
+      { id: 250, username: "student_2", subject: "Informatyka", grade: 5 },
+      { id: 251, username: "student_2", subject: "Informatyka", grade: 4 },
+      { id: 252, username: "student_2", subject: "Informatyka", grade: 5 },
+      { id: 253, username: "student_2", subject: "Informatyka", grade: 5 },
+      { id: 254, username: "student_2", subject: "Informatyka", grade: 5 },
+      { id: 255, username: "student_2", subject: "Informatyka", grade: 4 },
+      { id: 256, username: "student_2", subject: "Informatyka", grade: 5 },
+
+      // student_2 - Wychowanie fizyczne (12 ocen)
+      { id: 257, username: "student_2", subject: "Wychowanie fizyczne", grade: 6 },
+      { id: 258, username: "student_2", subject: "Wychowanie fizyczne", grade: 5 },
+      { id: 259, username: "student_2", subject: "Wychowanie fizyczne", grade: 6 },
+      { id: 260, username: "student_2", subject: "Wychowanie fizyczne", grade: 5 },
+      { id: 261, username: "student_2", subject: "Wychowanie fizyczne", grade: 6 },
+      { id: 262, username: "student_2", subject: "Wychowanie fizyczne", grade: 5 },
+      { id: 263, username: "student_2", subject: "Wychowanie fizyczne", grade: 6 },
+      { id: 264, username: "student_2", subject: "Wychowanie fizyczne", grade: 5 },
+      { id: 265, username: "student_2", subject: "Wychowanie fizyczne", grade: 6 },
+      { id: 266, username: "student_2", subject: "Wychowanie fizyczne", grade: 5 },
+      { id: 267, username: "student_2", subject: "Wychowanie fizyczne", grade: 6 },
+      { id: 268, username: "student_2", subject: "Wychowanie fizyczne", grade: 5 },
+
+      // student_2 - Wiedza o społeczeństwie (10 ocen)
+      { id: 269, username: "student_2", subject: "Wiedza o społeczeństwie", grade: 4 },
+      { id: 270, username: "student_2", subject: "Wiedza o społeczeństwie", grade: 3 },
+      { id: 271, username: "student_2", subject: "Wiedza o społeczeństwie", grade: 4 },
+      { id: 272, username: "student_2", subject: "Wiedza o społeczeństwie", grade: 4 },
+      { id: 273, username: "student_2", subject: "Wiedza o społeczeństwie", grade: 3 },
+      { id: 274, username: "student_2", subject: "Wiedza o społeczeństwie", grade: 4 },
+      { id: 275, username: "student_2", subject: "Wiedza o społeczeństwie", grade: 4 },
+      { id: 276, username: "student_2", subject: "Wiedza o społeczeństwie", grade: 3 },
+      { id: 277, username: "student_2", subject: "Wiedza o społeczeństwie", grade: 4 },
+      { id: 278, username: "student_2", subject: "Wiedza o społeczeństwie", grade: 4 }
     ];
+
     return { schedules, students };
   }
 }

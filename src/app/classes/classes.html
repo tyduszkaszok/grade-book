@@ -1,7 +1,7 @@
 <div class="container-fluid classes">
   <div class="row">
     <div class="col-12 col-md-4 mt-4" *ngFor="let class of classes">
-      
+
       <div class="class-box">
         <h3 class="classes-font">{{ class }}</h3>
 
@@ -13,8 +13,17 @@
           </thead>
           <tbody>
             <tr *ngFor="let id of getStudentsFromClass(class)">
-              <td>{{ getStudentByApiId(id) }}</td>
+              <td>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span>{{ getStudentByApiId(id) }}</span>
+
+                  <button class="btn btn-primary btn-sm" (click)="onClickStudentGrades(id)">
+                    Zobacz oceny
+                  </button>
+                </div>
+              </td>
             </tr>
+
           </tbody>
         </table>
       </div>

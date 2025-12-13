@@ -3,6 +3,7 @@ import { ApiStudents } from '../services/api-students';
 import { NgFor } from '@angular/common';
 import { MockStudents } from '../services/mock-students';
 import { StudentModel } from '../models/student';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -16,9 +17,9 @@ export class Classes implements OnInit {
   studentsFromClass: StudentModel[] = [];
   classes: string[] = [];
 
-  constructor(public apiStudents: ApiStudents, public mockStudents: MockStudents) { }
+  constructor(public apiStudents: ApiStudents, public mockStudents: MockStudents, private router: Router) { }
 
-  
+
 
   ngOnInit(): void {
     this.apiStudents.getStudents().subscribe(users => {
@@ -36,5 +37,9 @@ export class Classes implements OnInit {
   getStudentByApiId(id: number): string | undefined {
     const student = this.students.find(s => s.id === id);
     return student ? student.name : undefined;
+  }
+
+  onClickStudentGrades(id: number) {
+    this.router.navigate(['dashboard/classes/student', id]);
   }
 }
