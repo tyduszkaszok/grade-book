@@ -1,0 +1,24 @@
+<div class="container-fluid classes">
+  <div class="row">
+    <div class="col-12 col-md-4 mt-4" *ngFor="let class of classes">
+      
+      <div class="class-box">
+        <h3 class="classes-font">{{ class }}</h3>
+
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th scope="col">Imię i Nazwisko</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let id of getStudentsFromClass(class)">
+              <td>{{ getStudentByApiId(id) }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>
