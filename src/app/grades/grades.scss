@@ -1,19 +1,35 @@
 .grades {
-  min-height: 100vh;
   background: linear-gradient(135deg, #71b7e6, #9b59b6);
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: start;
+  padding: 2rem;
+
+
 }
 
 .grades-container {
-  margin-top: 5%;
+  margin-top: 3%;
   background-color: #ffffff;
   border-radius: 1.5rem;
-  padding: 1.5rem;
+  padding: 2rem;
   box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s ease;
-  max-width: 1200px; 
-  width: 100%;
+  max-width: 1000px;
+  width: 90%;
+  
+  h1 {
+    color: #333;
+    margin-bottom: 2rem;
+  }
+}
+
+.grades-row {
+  margin-bottom: 1rem;
+  background-color: #b47fb2;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.1);
+  
+  h2 {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin: 0;
+  }
 }

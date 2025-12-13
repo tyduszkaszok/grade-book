@@ -11,7 +11,7 @@ import { Auth } from '../services/auth';
 })
 export class Grades {
   students: any[] = [];
-  subjects: string[] = ["Matematyka", "Chemia", "Fizyka", "Język angielski", "Język Polski", "Wychowanie fizyczne", "Historia", "Biologia", "Geografia", "Informatyka", "Wiedza o społeczeństwie"];
+  subjects: string[] = ["Matematyka", "Chemia", "Fizyka", "Język angielski", "Język polski", "Wychowanie fizyczne", "Historia", "Biologia", "Geografia", "Informatyka", "Wiedza o społeczeństwie"];
   student_id: string | null = null;
   constructor(public apiMock: ApiMock, private auth : Auth) { };
   ngOnInit(): void {
