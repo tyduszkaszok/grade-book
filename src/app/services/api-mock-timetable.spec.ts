@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ApiMockTimetable } from './api-mock-timetable';
+import { ApiMockTimetable } from './api-mock';
 
 describe('ApiMockTimetable', () => {
   let service: ApiMockTimetable;

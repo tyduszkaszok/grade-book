@@ -1,1 +1,7 @@
-<p>grades works!</p>
+<div class="grades">
+  <div class="container grades-container">
+    <div *ngFor="let subject of subjects" class="row">
+      <h2>{{ subject }}: {{ getGrades(subject).join(', ') }}</h2>
+    </div>
+  </div>
+</div>
