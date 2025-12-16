@@ -43,15 +43,12 @@ export class Api {
 
   constructor() { }
 
-  // metoda logowania
   login(username: string, password: string): Observable<{ token: string }> {
     const user = this.users.find(u => u.username === username && u.password === password);
 
     if (user) {
-      // symulacja opóźnienia 500ms
       return of({ token: user.token }).pipe(delay(500));
     } else {
-      // błąd logowania
       return throwError(() => new Error('Niepoprawny login lub hasło'));
     }
   }

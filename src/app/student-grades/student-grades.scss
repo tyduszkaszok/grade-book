@@ -1,0 +1,57 @@
+.student-grades {
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.student-card {
+  position: relative;
+  margin-top: 2rem;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.15);
+}
+.add-grade-btn {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+}
+
+.student-title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.student-name {
+  color: #9b59b6;
+}
+
+.grades-title {
+  margin-top: 1.5rem;
+  font-weight: 500;
+}
+
+.grades-list {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.grade {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: #71b7e6;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.2);
+}

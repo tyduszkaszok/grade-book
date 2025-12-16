@@ -1,0 +1,18 @@
+<div class="grades-container d-flex justify-content-center align-items-center">
+  <div class="input-box text-center">
+    <h2 class="mb-4">Dodawanie ocen</h2>
+    <form class="grades-form">
+      <input
+        type="text"
+        [(ngModel)]="gradesInput"
+        name="grades"
+        id="grades"
+        class="form-control"
+        placeholder="Wpisz oceny po przecinku (np. 5, 4.5, 3)"
+      />
+      <button type="button" class="btn btn-primary mt-3" (click)="onClick()">
+        Zapisz oceny
+      </button>
+    </form>
+  </div>
+</div>

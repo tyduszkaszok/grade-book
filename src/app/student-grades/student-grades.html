@@ -1,2 +1,26 @@
-<p>{{ studentId }}</p>
-<p>{{ grades }}</p>
+<div class="container-fluid student-grades">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+            <div class="student-card text-center">
+
+                <h1 class="student-title">
+                    Uczeń: <span class="student-name">{{ name }}</span>
+                </h1>
+
+                <hr />
+
+                <h4 class="grades-title">Oceny</h4>
+
+                <div class="grades-list">
+                    <span class="grade" *ngFor="let grade of grades">
+                        {{ grade }}
+                    </span>
+                </div>
+                <button class="btn btn-primary btn-sm add-grade-btn " (click)="onClickAddGrades()">
+                    Dodaj oceny
+                </button>
+
+            </div>
+        </div>
+    </div>
+</div>

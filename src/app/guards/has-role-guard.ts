@@ -18,7 +18,7 @@ export class HasRoleGuard implements CanActivate {
     const isAuthorised = this.authService.user.role.includes(route.data['role']);
     if(!isAuthorised){
       window.alert("No authorization!");
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['/dashboard/school-info']);
     
     }
 
