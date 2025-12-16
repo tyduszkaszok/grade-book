@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Api } from './api'
+import { AuthApiService } from './auth-api.service'
 import { tap } from 'rxjs/operators'
 import { BehaviorSubject } from 'rxjs';
-import { UserModel } from '../models/user';
+import { UserModel } from '../../models/user';
 @Injectable({
   providedIn: 'root',
 })
-export class Auth {
+export class AuthService {
   private _isLoggedIn$ = new BehaviorSubject<boolean>(false);
   isLoggedIn$ = this._isLoggedIn$.asObservable();
   user!: UserModel;
@@ -14,7 +14,7 @@ export class Auth {
   get token(): any {
     return localStorage.getItem("auth");
   }
-  constructor(private apiService: Api) {
+  constructor(private apiService: AuthApiService) {
     const token = this.token;
     this._isLoggedIn$.next(!!token);
     if (token) {

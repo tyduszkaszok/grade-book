@@ -3,8 +3,8 @@ import { Login } from './login/login'
 import { Dashboard } from './dashboard/dashboard';
 import { Grades } from './grades/grades';
 import { Timetable } from './timetable/timetable';
-import { IsAuthenticatedGuard } from './guards/is-authenticated-guard';
-import { HasRoleGuard } from './guards/has-role-guard';
+import { IsAuthenticatedGuard } from './services/guards/is-authenticated-guard';
+import { HasRoleGuard } from './services/guards/has-role-guard';
 import { Classes } from './classes/classes';
 import { SchoolInfo } from './school-info/school-info';
 import { StudentGrades } from './student-grades/student-grades';
@@ -60,8 +60,8 @@ export const routes: Routes = [
         data: { role: 'teacher' }
       }
     ]
-  }
-  // opcjonalnie: 404
-  // { path: '**', redirectTo: 'login' }
+  },
+
+  { path: '**', redirectTo: 'login' }
 ];
 

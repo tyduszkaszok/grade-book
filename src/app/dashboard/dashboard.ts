@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Auth } from '../services/auth';
+import { AuthService } from '../services/auth/auth.service';
 import { Router } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
 
@@ -13,7 +13,7 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './dashboard.scss',
 })
 export class Dashboard {
-  constructor(public auth: Auth, private router: Router) { }
+  constructor(public authService: AuthService, private router: Router) { }
 
   onClickGrades() {
     this.router.navigate(['dashboard/grades']);
@@ -36,15 +36,15 @@ export class Dashboard {
   }
   
   get isStudent(): boolean {
-    return this.auth.getRole() === 'student';
+    return this.authService.getRole() === 'student';
   }
 
   get isTeacher(): boolean {
-    return this.auth.getRole() === 'teacher';
+    return this.authService.getRole() === 'teacher';
   }
 
   logout(){
-    this.auth.logout()
+    this.authService.logout()
     this.router.navigate(['login']);
   }
 

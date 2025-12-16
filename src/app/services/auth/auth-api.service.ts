@@ -5,7 +5,7 @@ import { delay } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class Api {
+export class AuthApiService {
 
   private users = [
 

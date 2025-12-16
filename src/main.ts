@@ -5,16 +5,8 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { appConfig } from './app/app.config';
 import { App } from './app/app';
-import { MockDb } from './app/services/mock-db';
+import { MockDb } from './app/services/mocks/mock-db';
 
-
-const allowedKeys = ['auth'];
-Object.keys(localStorage).forEach(key => {
-  if (!allowedKeys.includes(key)) {
-    console.warn(`🧹 Czyszczenie: ${key} = ${localStorage.getItem(key)}`);
-    localStorage.removeItem(key);
-  }
-});
 
 
 bootstrapApplication(App, {

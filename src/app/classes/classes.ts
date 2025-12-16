@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiStudents } from '../services/api-students';
+import { ApiStudents } from '../services/external/students-api.service';
 import { NgFor } from '@angular/common';
 import { Router } from '@angular/router';
-import { ApiMock } from '../services/api-mock';
+import { ApiMock } from '../services/mocks/mock-api.service';
 
 @Component({
   selector: 'app-classes',
@@ -22,16 +22,13 @@ export class Classes implements OnInit {
   ) { }
   
   ngOnInit(): void {
-    // Załaduj studentów z API
     this.apiStudents.getStudents().subscribe(users => {
       this.students = users;
     });
     
-    // Załaduj klasy i studentów dla każdej klasy
     this.apiMock.getClasses().subscribe(classes => {
       this.classes = classes.sort();
       
-      // Dla każdej klasy załaduj studentów
       this.classes.forEach(className => {
         this.loadStudentsForClass(className);
       });

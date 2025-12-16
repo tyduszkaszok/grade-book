@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { OnInit } from '@angular/core';
-import { ApiSchools } from '../services/api-schools';
+import { ApiSchools } from '../services/external/schools-api.service';
 import { NgFor } from '@angular/common';
 
 @Component({

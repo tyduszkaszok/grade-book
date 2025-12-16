@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { ApiStudents } from '../services/api-students';
+import { ApiStudents } from '../services/external/students-api.service';
 import { NgFor } from '@angular/common';
-import { ApiMock } from '../services/api-mock';
+import { ApiMock } from '../services/mocks/mock-api.service';
 import { Router } from '@angular/router';
 
 @Component({
