@@ -30,7 +30,7 @@ export class Login {
     this.authService.login(
       this.form.get('username')!.value!,
       this.form.get('password')!.value!
-    ).subscribe((response) => { this.router.navigate(['/dashboard'])});
+    ).subscribe((response) => { this.router.navigate(['/dashboard/school-info'])});
   }
 
 

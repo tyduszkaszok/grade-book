@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiStudents } from '../services/api-students';
 import { NgFor } from '@angular/common';
-import { MockStudents } from '../services/mock-students';
-import { StudentModel } from '../models/student';
 import { Router } from '@angular/router';
-
+import { ApiMock } from '../services/api-mock';
 
 @Component({
   selector: 'app-classes',
@@ -14,32 +12,48 @@ import { Router } from '@angular/router';
 })
 export class Classes implements OnInit {
   students: any[] = [];
-  studentsFromClass: StudentModel[] = [];
   classes: string[] = [];
-
-  constructor(public apiStudents: ApiStudents, public mockStudents: MockStudents, private router: Router) { }
-
-
-
+  studentsByClass: { [className: string]: any[] } = {};
+  
+  constructor(
+    public apiStudents: ApiStudents, 
+    private router: Router, 
+    private apiMock: ApiMock
+  ) { }
+  
   ngOnInit(): void {
+    // Załaduj studentów z API
     this.apiStudents.getStudents().subscribe(users => {
       this.students = users;
     });
-
-    this.classes = this.mockStudents.getClasses().sort();
+    
+    // Załaduj klasy i studentów dla każdej klasy
+    this.apiMock.getClasses().subscribe(classes => {
+      this.classes = classes.sort();
+      
+      // Dla każdej klasy załaduj studentów
+      this.classes.forEach(className => {
+        this.loadStudentsForClass(className);
+      });
+    });
   }
-
-  getStudentsFromClass(className: string) {
-    this.studentsFromClass = this.mockStudents.getStudentsFromClass(className);
-    return this.studentsFromClass.map(student => student.id);
+  
+  loadStudentsForClass(className: string): void {
+    this.apiMock.getStudentsFromClass(className).subscribe(students => {
+      this.studentsByClass[className] = students;
+    });
   }
-
+  
+  getStudentsFromClass(className: string): any[] {
+    return this.studentsByClass[className] || [];
+  }
+  
   getStudentByApiId(id: number): string | undefined {
     const student = this.students.find(s => s.id === id);
     return student ? student.name : undefined;
   }
-
-  onClickStudentGrades(id: number) {
+  
+  onClickStudentGrades(id: number): void {
     this.router.navigate(['dashboard/classes/student', id]);
   }
 }

@@ -9,9 +9,11 @@ export class ApiStudents {
   constructor(private http: HttpClient) {
   }
 
-
-
   getStudents(): Observable<any[]> {
     return this.http.get<any[]>('https://jsonplaceholder.typicode.com/users');
+  }
+
+  getStudentById(id: string) : Observable<any> {
+    return this.http.get<any[]>(`https://jsonplaceholder.typicode.com/users/${id}`);
   }
 }
