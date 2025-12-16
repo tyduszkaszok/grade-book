@@ -1,9 +1,8 @@
-import { Component, inject } from '@angular/core';
-import { FormControl, FormControlName, FormGroup, FormsModule, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormControl, FormGroup, FormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router'
-import { Api } from '../services/api';
 import { ReactiveFormsModule } from '@angular/forms';
-import { Auth } from '../services/auth'
+import { AuthService } from '../services/auth/auth.service'
 
 
 @Component({
@@ -19,7 +18,7 @@ export class Login {
     password: new FormControl(null, Validators.required)
   });
 
-  constructor(private authService: Auth, private router: Router) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   submitForm() {
     if (this.form.invalid) {
@@ -30,7 +29,7 @@ export class Login {
     this.authService.login(
       this.form.get('username')!.value!,
       this.form.get('password')!.value!
-    ).subscribe((response) => { this.router.navigate(['/dashboard/school-info'])});
+    ).subscribe((response) => { this.router.navigate(['/dashboard/school-info']) });
   }
 
 

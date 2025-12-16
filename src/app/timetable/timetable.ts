@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { ApiMock} from '../services/api-mock';
+import { ApiMock} from '../services/mocks/mock-api.service';
 import { CommonModule } from '@angular/common';
-import { Auth } from '../services/auth'
+import { AuthService } from '../services/auth/auth.service'
 
 
 @Component({
@@ -17,7 +17,7 @@ export class Timetable {
   timetable: any[] = [];
   userClass: string | null = null;
   days: string[] = ['Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek'];
-  constructor(private apiMock: ApiMock, private auth: Auth) { }
+  constructor(private apiMock: ApiMock, private auth: AuthService) { }
 
   ngOnInit() {
     this.userClass = this.auth.getClass();

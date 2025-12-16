@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { ApiMock } from '../services/api-mock';
+import { ApiMock } from '../services/mocks/mock-api.service';
 
 @Component({
   selector: 'app-add-grades',
@@ -26,19 +26,16 @@ export class AddGrades implements OnInit {
   }
 
   onClick() {
-    // Sprawdź czy input nie jest pusty
     if (!this.gradesInput.trim()) {
       alert('Wpisz oceny!');
       return;
     }
 
-    // Sprawdź czy są po przecinku
     if (!this.gradesInput.includes(',')) {
       alert('Oceny muszą być oddzielone przecinkami!');
       return;
     }
 
-    // Parsuj oceny
     const newGrades = this.gradesInput
       .split(',')
       .map(grade => parseFloat(grade.trim()))
@@ -49,15 +46,11 @@ export class AddGrades implements OnInit {
       return;
     }
 
-    // Pobierz aktualnego studenta i dodaj nowe oceny
     this.apiMock.getStudent(Number(this.studentId)).subscribe(student => {
-      // Zaktualizuj cały obiekt studenta z nowymi ocenami
       const updatedStudent = {
         ...student,
         grades: [...student.grades, ...newGrades]
       };
-
-      // Wyślij cały obiekt studenta
       this.apiMock.updateStudent(Number(this.studentId), updatedStudent).subscribe(() => {
         alert('Oceny zostały dodane!');
         this.router.navigate(['dashboard/classes/student', this.studentId]);
