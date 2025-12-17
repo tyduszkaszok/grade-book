@@ -12,12 +12,12 @@ import { AuthService } from '../services/auth/auth.service';
 export class Grades {
   students: any[] = [];
   subjects: string[] = ["Matematyka", "Chemia", "Fizyka", "Język angielski", "Język polski", "Wychowanie fizyczne", "Historia", "Biologia", "Geografia", "Informatyka", "Wiedza o społeczeństwie"];
-  student_id: string | null = null;
+  studentId: string | null = null;
   constructor(public apiMock: ApiMock, private authService: AuthService) { };
   ngOnInit(): void {
-    this.student_id = this.authService.getUserId();
+    this.studentId = this.authService.getUserId();
     this.apiMock.getStudents().subscribe(data => {
-      this.students = data.filter( item => item.username === this.student_id); 
+      this.students = data.filter( item => item.username === this.studentId); 
     });
   }
 

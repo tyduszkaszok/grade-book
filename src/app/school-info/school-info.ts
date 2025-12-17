@@ -32,7 +32,8 @@ export class SchoolInfo implements OnInit {
 
   }
 
-  getValueFromCol(id: number, col: string): string {
-    return this['schools'][id].attributes[`col${col}`].val;
-  }
+getValueFromCol(id: number, col: string): string {
+  if (!this.schools[id]) return '—';  
+  return this.schools[id].attributes[`col${col}`].val || '—';
+}
 }

@@ -25,11 +25,18 @@ export class Login {
       return;
     }
 
-
     this.authService.login(
       this.form.get('username')!.value!,
       this.form.get('password')!.value!
-    ).subscribe((response) => { this.router.navigate(['/dashboard/school-info']) });
+    ).subscribe({
+      next: (response) => {
+        this.router.navigate(['/dashboard/school-info']);
+      },
+      error: (error) => {
+        console.error('Błąd logowania:', error);
+        alert('Niepoprawny login lub hasło');
+      }
+    });
   }
 
 

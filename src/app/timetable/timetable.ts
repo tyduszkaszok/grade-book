@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { ApiMock} from '../services/mocks/mock-api.service';
 import { CommonModule } from '@angular/common';
 import { AuthService } from '../services/auth/auth.service'
